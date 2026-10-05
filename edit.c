@@ -152,9 +152,12 @@ void do_edit(E_MP3INFO *einfo)
     {
         fwrite(&data,1,1,einfo->fptr_temp_mp3);
     }
-    printf("[ success ] edited\n");
+    
     fclose(einfo->fptr_mp3);
     fclose(einfo->fptr_temp_mp3);
+    remove(einfo->mp3_fname);
+    rename(einfo->temp_mp3_fname,einfo->mp3_fname);
+    printf("[ success ] edited\n");
     return;
 }
 
