@@ -17,7 +17,7 @@ typedef struct
 
 }E_MP3INFO;
 
-OperationType check_operationtype(char opt);
+OperationType check_operationtype(char *opt);
 Status read_and_validate_edit_args(char *argv[],E_MP3INFO *einfo);
 Status get_tag_to_edit(char e_tag,E_MP3INFO *einfo);
 Status open_edit_files(E_MP3INFO *einfo);

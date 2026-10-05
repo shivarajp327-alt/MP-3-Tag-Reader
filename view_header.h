@@ -11,7 +11,7 @@ typedef struct
 
 }V_MP3INFO;
 
-OperationType check_operationtype(char opt);
+OperationType check_operationtype(char *opt);
 Status read_and_validate_args(char *argv[],V_MP3INFO *vinfo);
 Status open_files(V_MP3INFO *vinfo);
 void view_operation(V_MP3INFO *vinfo);
